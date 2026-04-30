@@ -5,5 +5,13 @@ Student Documentation
 
 .. toctree::
    :maxdepth: 2
+   :caption: Зміст:
 
    intro
+   section1
+   section2
+   section3
+   section4
+   conclusion
+   sources
+   appendices
