@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started &mdash; Student Documentation 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Student Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Зміст:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Вступ</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="get_started.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="section1.html">Розділ 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="section2.html">Розділ 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="section3.html">Розділ 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="section4.html">Розділ 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusion.html">Висновок</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sources.html">Список використаних джерел</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices.html">Додатки</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Student Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Get Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/get_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="get-started">
+<h1>Get Started<a class="headerlink" href="#get-started" title="Link to this heading"></a></h1>
+<p>Цей розділ описує процес встановлення та запуску документаційного проєкту на базі Sphinx.</p>
+<section id="id1">
+<h2>Вимоги<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>Перед початком переконайтесь, що у вас встановлено:</p>
+<ul class="simple">
+<li><p>Python 3.8 або новіше</p></li>
+<li><p>pip (менеджер пакетів Python)</p></li>
+<li><p>Git (опціонально)</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>Встановлення<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Клонуйте репозиторій:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;посилання_на_репозиторій&gt;
+<span class="nb">cd</span><span class="w"> </span>&lt;назва_папки&gt;
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Встановіть необхідні залежності:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>Якщо файл requirements.txt відсутній, встановіть Sphinx вручну:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>Запуск документації<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Для локального перегляду документації виконайте:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html
+</pre></div>
+</div>
+<p>Після виконання команди відкрийте файл:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>_build/html/index.html
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>Автоматичне оновлення (опціонально)<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>Для автоматичної перебудови документації при зміні файлів використовуйте:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx-autobuild
+
+sphinx-autobuild<span class="w"> </span>.<span class="w"> </span>_build/html
+</pre></div>
+</div>
+<p>Після запуску відкрийте у браузері:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>http://127.0.0.1:8000
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>Структура проєкту<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>section1.rst – Розділ 1</p></li>
+<li><p>section2.rst – Розділ 2</p></li>
+<li><p>section3.rst – Розділ 3</p></li>
+<li><p>section4.rst – Розділ 4</p></li>
+<li><p>sources.rst – Список використаних джерел</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

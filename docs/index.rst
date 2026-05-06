@@ -8,11 +8,11 @@ Student Documentation
    :caption: Зміст:
 
    intro
+   get_started
    section1
    section2
    section3
    section4
-   section5
    conclusion
    sources
    appendices
