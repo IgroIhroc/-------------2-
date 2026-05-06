@@ -6,10 +6,13 @@ project = 'Student Documentation'
 author = 'Ilya Holovatyi'
 release = '1.0'
 
-extensions = ['myst_parser']
+extensions = [
+    "myst_parser",
+]
 
 source_suffix = {
-     '.md': 'markdown'
+    ".md": "markdown",
+    ".rst": "restructuredtext",
 }
 
 templates_path = ['_templates']
@@ -22,3 +25,7 @@ html_theme_options = {
     'collapse_navigation': False,
     'navigation_depth': 4,
 }
+
+myst_enable_extensions = [
+    "colon_fence",
+]
