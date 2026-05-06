@@ -6,7 +6,11 @@ project = 'Student Documentation'
 author = 'Ilya Holovatyi'
 release = '1.0'
 
-extensions = []
+extensions = ['myst_parser']
+
+source_suffix = {
+     '.md': 'markdown'
+}
 
 templates_path = ['_templates']
 exclude_patterns = []
