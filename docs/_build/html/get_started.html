@@ -18,7 +18,9 @@
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Розділ 1" href="section1.html" />
+    <link rel="prev" title="Вступ" href="intro.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,9 +43,16 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Зміст:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Вступ</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="get_started.html">Get Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Вимоги</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Встановлення</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Запуск документації</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Автоматичне оновлення (опціонально)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Структура проєкту</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="section1.html">Розділ 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="section2.html">Розділ 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="section3.html">Розділ 3</a></li>
@@ -69,7 +78,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Get Started</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/get_started.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/get_started.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -79,7 +88,7 @@
              
   <section id="get-started">
 <h1>Get Started<a class="headerlink" href="#get-started" title="Link to this heading"></a></h1>
-<p>Цей розділ описує процес встановлення та запуску документаційного проєкту на базі Sphinx.</p>
+<p>Цей розділ описує процес встановлення та запуску документааційного проєкту на базі Sphinx.</p>
 <section id="id1">
 <h2>Вимоги<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p>Перед початком переконайтесь, що у вас встановлено:</p>
@@ -104,7 +113,7 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </pre></div>
 </div>
-<p>Якщо файл requirements.txt відсутній, встановіть Sphinx вручну:</p>
+<p>Якщо файл <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> відсутній, встановіть Sphinx вручну:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx
 </pre></div>
 </div>
@@ -124,7 +133,6 @@
 <h2>Автоматичне оновлення (опціонально)<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
 <p>Для автоматичної перебудови документації при зміні файлів використовуйте:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx-autobuild
-
 sphinx-autobuild<span class="w"> </span>.<span class="w"> </span>_build/html
 </pre></div>
 </div>
@@ -136,11 +144,11 @@ sphinx-autobuild<span class="w"> </span>.<span class="w"> </span>_build/html
 <section id="id5">
 <h2>Структура проєкту<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>section1.rst – Розділ 1</p></li>
-<li><p>section2.rst – Розділ 2</p></li>
-<li><p>section3.rst – Розділ 3</p></li>
-<li><p>section4.rst – Розділ 4</p></li>
-<li><p>sources.rst – Список використаних джерел</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section1.md</span></code> – Розділ 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section2.md</span></code> – Розділ 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section3.md</span></code> – Розділ 3</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section4.md</span></code> – Розділ 4</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sources.md</span></code> – Список використаних джерел</p></li>
 </ul>
 </section>
 </section>
@@ -148,7 +156,10 @@ sphinx-autobuild<span class="w"> </span>.<span class="w"> </span>_build/html
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="intro.html" class="btn btn-neutral float-left" title="Вступ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="section1.html" class="btn btn-neutral float-right" title="Розділ 1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
