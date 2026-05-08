@@ -65,8 +65,18 @@
 <li class="toctree-l2"><a class="reference internal" href="#github-actions-triggers-workflows-runners">2.3. Механізми автоматизації GitHub Actions: події (triggers), робочі процеси (workflows) та оточення (runners)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="section3.html">Розділ 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="section4.html">Розділ 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="section3.html">Розділ 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="section3.html#conf-py">3.1. Структурування навчальної документації та налаштування conf.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section3.html#workflow-github-actions">3.2. Розробка сценарію (Workflow) для GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section3.html#linting-linkcheck-ci">3.3. Інтеграція перевірки синтаксису (linting) та перевірки посилань (linkcheck) у CI-процес</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="section4.html">Розділ 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="section4.html#id2">4.1. Аналіз швидкості публікації змін</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section4.html#pull-requests">4.2. Оцінка зручності спільної роботи студентів над документацією через Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section4.html#id3">4.3. Рекомендації щодо впровадження системи в освітній процес</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">Висновок</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sources.html">Список використаних джерел</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appendices.html">Додатки</a></li>
@@ -108,7 +118,7 @@
 <a class="reference internal image-reference" href="_images/foto1.png"><img alt="_images/foto1.png" src="_images/foto1.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Рис.2.1 - Архітектура взаємодії Sphinx</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<p><span class="caption-text">Рис.2.1- Архітектура взаємодії Sphinx, Git та хмарних сервісів</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Архітектурний ланцюжок продовжується етапом інсталяції середовища Python усередині ранера, де за допомогою менеджера пакетів pip встановлюються Sphinx та необхідні розширення. На цьому етапі архітектура системи повинна враховувати безпеку даних та цілісність посилань, використовуючи кешування для прискорення повторних збирань. Сценарій автоматизації виконує команду побудови HTML-сторінок, звертаючись до конфігураційного файлу проекту для отримання вказівок щодо теми оформлення та структури змісту. У разі виникнення помилок на будь-якому з етапів хмарний сервіс негайно зупиняє процес та надсилає сповіщення розробнику, що запобігає публікації некоректних документів. Як стверджує експерт з хмарних технологій Марк Річардс у своїх працях з архітектури програмного забезпечення <a class="reference internal" href="sources.html#source26"><span class="std std-ref">26</span></a>, зворотний зв’язок у реальному часі є ключовим показником ефективності CI-системи.</p>
