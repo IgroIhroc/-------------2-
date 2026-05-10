@@ -9,6 +9,7 @@
   <title>Вступ &mdash; Student Documentation 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b73f55e6" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -19,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Get Started" href="get_started.html" />
+    <link rel="next" title="Встановлення та запуск документації" href="get_started.html" />
     <link rel="prev" title="Student Documentation" href="index.html" /> 
 </head>
 
@@ -45,12 +46,26 @@
               <p class="caption" role="heading"><span class="caption-text">Зміст:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Вступ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id1">Вимоги</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id2">Встановлення</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id3">Запуск документації</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id4">Автоматичне оновлення (опціонально)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id5">Структура проєкту</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started.html">Встановлення та запуск документації</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id2">Вимоги</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id3">Клонування репозиторію</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id4">Створення віртуального середовища</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#linux-macos">Linux / macOS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id5">Встановлення залежностей</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id6">Локальна збірка документації</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id7">Автоматичне оновлення документації</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#github">Публікація змін у GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id8">Додавання зображень</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id9">Підтримуються формати:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id10">Посилання на використані джерела</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#id11">Посилання у тексті</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#id12">Оформлення джерела у списку літератури</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id13">Структура проєкту</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="section1.html">Розділ 1</a><ul>
@@ -79,7 +94,22 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">Висновок</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sources.html">Список використаних джерел</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendices.html">Додатки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices.html">Додатки</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html#a">ДОДАТОК A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html#id2">ДОДАТОК В</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html#d">ДОДАТОК D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#index-md">Index.md:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#selection1-md">selection1.md:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html#e">ДОДАТОК E</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#github-actions">GitHub Actions (скріншот)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#github-pages">GitHub Pages сайт (скріншот)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#pull-request">Pull Request (скріншот)</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -108,13 +138,18 @@
              
   <section id="id1">
 <h1>Вступ<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<p>Це приклад документації, створеної за допомогою Sphinx.</p>
-<p>Мета:</p>
-<ul class="simple">
-<li><p>автоматизація документації</p></li>
-<li><p>використання Sphinx</p></li>
-<li><p>інтеграція з GitHub Actions</p></li>
-</ul>
+<p>Актуальність автоматизації підготовки технічної документації в сучасному освітньому процесі зумовлена активним розвитком методологій безперервної інтеграції та доставки програмного забезпечення (CI/CD). У підготовці майбутніх фахівців з комп’ютерних наук важливого значення набуває використання інструментів, що поєднують розробку програмного коду з його якісним і актуальним описом.</p>
+<p>Традиційні підходи до створення навчальної та технічної документації за допомогою текстових редакторів мають низку недоліків, зокрема складність підтримки актуальності матеріалів, відсутність автоматичної перевірки та проблеми синхронізації версій. У цьому контексті підхід Documentation as Code, описаний у роботах Еріка Холшера <a class="reference internal" href="sources.html#source2"><span class="std std-ref">2</span></a>, дозволяє розглядати документацію як частину програмного проєкту, що зберігається та оновлюється разом із вихідним кодом.</p>
+<p>Одним із ключових інструментів для реалізації цього підходу є генератор документації Sphinx <a class="reference internal" href="sources.html#source1"><span class="std std-ref">1</span></a>, який забезпечує створення структурованих технічних матеріалів у форматі вебсайтів або PDF-документів. Завдяки розширенню autodoc можливе автоматичне формування опису програмних компонентів безпосередньо з коду, що зменшує ризик невідповідності між реалізацією та документацією.</p>
+<p>Для автоматизації процесу збирання та публікації документації використовується платформа GitHub Actions <a class="reference internal" href="sources.html#source3"><span class="std std-ref">3</span></a>, яка дозволяє організувати безперервну інтеграцію та автоматичне розгортання результатів. Кожна зміна в репозиторії може ініціювати процес генерації документації, що забезпечує її постійну актуальність та знижує потребу в ручному оновленні.</p>
+<p>Додатково у роботі враховано підходи до автоматизованого тестування документації, зокрема перевірку посилань і синтаксису, що розглядаються у дослідженнях Фабріціо Феррі-Бенедетті <a class="reference internal" href="sources.html#source4"><span class="std std-ref">4</span></a>. Це дозволяє підвищити якість кінцевих матеріалів та запобігти появі помилок у публічній версії документації.</p>
+<p>Об’єктом дослідження є процес підготовки технічної документації в академічних ІТ-проєктах.</p>
+<p>Предметом дослідження є методи автоматизації створення, перевірки та публікації документації з використанням Sphinx та GitHub Actions.</p>
+<p>Метою роботи є розробка та впровадження системи автоматизованої генерації та публікації технічної документації, що забезпечує її актуальність, цілісність і зручність використання.</p>
+<p>Для досягнення поставленої мети необхідно проаналізувати існуючі інструменти генерації документації, розглянути принципи роботи CI/CD систем та розробити архітектуру автоматизованого процесу публікації матеріалів. Практична цінність роботи полягає у створенні універсального шаблону проєкту, який може бути використаний у навчальному процесі для різних дисциплін.</p>
+<p>Наукова новизна полягає в адаптації індустріальних підходів до автоматизації розробки програмного забезпечення для освітнього середовища, що дозволяє підвищити якість навчальних матеріалів та рівень цифрових компетентностей студентів.</p>
+<p>У першому розділі роботи наведено аналіз існуючих технологій генерації документації. Другий розділ присвячено проєктуванню архітектури системи. У третьому розділі описано практичну реалізацію. Четвертий розділ містить оцінку ефективності та аналіз результатів використання системи.</p>
+<p>Таким чином, робота спрямована на дослідження та впровадження сучасних підходів до автоматизації технічної документації, що відповідають вимогам індустрії програмного забезпечення та сучасної освіти.</p>
 </section>
 
 
@@ -122,7 +157,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Student Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="get_started.html" class="btn btn-neutral float-right" title="Get Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="get_started.html" class="btn btn-neutral float-right" title="Встановлення та запуск документації" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

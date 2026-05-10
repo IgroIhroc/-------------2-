@@ -9,6 +9,7 @@
   <title>Додатки &mdash; Student Documentation 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b73f55e6" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -44,12 +45,26 @@
               <p class="caption" role="heading"><span class="caption-text">Зміст:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Вступ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id1">Вимоги</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id2">Встановлення</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id3">Запуск документації</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id4">Автоматичне оновлення (опціонально)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_started.html#id5">Структура проєкту</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started.html">Встановлення та запуск документації</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id2">Вимоги</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id3">Клонування репозиторію</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id4">Створення віртуального середовища</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#linux-macos">Linux / macOS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id5">Встановлення залежностей</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id6">Локальна збірка документації</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id7">Автоматичне оновлення документації</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#github">Публікація змін у GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id8">Додавання зображень</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id9">Підтримуються формати:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id10">Посилання на використані джерела</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#id11">Посилання у тексті</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_started.html#id12">Оформлення джерела у списку літератури</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#id13">Структура проєкту</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="section1.html">Розділ 1</a><ul>
@@ -78,7 +93,22 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">Висновок</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sources.html">Список використаних джерел</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Додатки</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Додатки</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a">ДОДАТОК A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">ДОДАТОК В</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#d">ДОДАТОК D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-md">Index.md:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selection1-md">selection1.md:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#e">ДОДАТОК E</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#github-actions">GitHub Actions (скріншот)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github-pages">GitHub Pages сайт (скріншот)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull-request">Pull Request (скріншот)</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -107,7 +137,164 @@
              
   <section id="id1">
 <h1>Додатки<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<p>Тут будуть додатки.</p>
+<section id="a">
+<h2>ДОДАТОК A<a class="headerlink" href="#a" title="Link to this heading"></a></h2>
+<p>GitHub Actions
+код YAML:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>name: Deploy Sphinx Docs
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: &#39;3.11&#39;
+
+      - name: Install dependencies
+        run: |
+          pip install sphinx
+          pip install myst-parser
+          pip install sphinx-rtd-theme
+
+      - name: Build documentation
+        run: |
+          cd docs
+          make html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>ДОДАТОК В<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Sphinx конфіг
+Код conf.py:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Student Documentation&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Ilya Holovatyi&#39;</span>
+<span class="n">release</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span>
+
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;myst_parser&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;.md&quot;</span><span class="p">:</span> <span class="s2">&quot;markdown&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;.rst&quot;</span><span class="p">:</span> <span class="s2">&quot;restructuredtext&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;collapse_navigation&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;navigation_depth&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    
+<span class="p">}</span>
+
+
+<span class="n">myst_enable_extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;colon_fence&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="d">
+<h2>ДОДАТОК D<a class="headerlink" href="#d" title="Link to this heading"></a></h2>
+<p>Приклад документації (Index.md) i (selection1.md)</p>
+<section id="index-md">
+<h3>Index.md:<a class="headerlink" href="#index-md" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Student Documentation
+
+Ласкаво просимо до документації курсової роботи.
+
+```{toctree}
+:maxdepth: 2
+:caption: Зміст:
+
+intro
+get_started
+section1
+section2
+section3
+section4
+conclusion
+sources
+appendices
+</pre></div>
+</div>
+</section>
+<section id="selection1-md">
+<h3>selection1.md:<a class="headerlink" href="#selection1-md" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Розділ 1
+
+АНАЛІЗ ТЕХНОЛОГІЙ ГЕНЕРАЦІЇ ТА ХОСТИНГУ ДОКУМЕНТАЦІЇ ваfg
+
+## 1.1. Огляд сучасних форматів розмітки (reStructuredText vs Markdown) 
+
+Вибір формату розмітки є першочерговим завданням при проектуванні системи автоматизованої підготовки документів, оскільки саме він визначає гнучкість структури та можливості подальшої обробки тексту…………………. І тд.
+</pre></div>
+</div>
+</section>
+</section>
+<section id="e">
+<h2>ДОДАТОК E<a class="headerlink" href="#e" title="Link to this heading"></a></h2>
+<p>Скріншоти роботи коду,  GitHub Actions ,  GitHub Pages (сайт),  Pull Request.</p>
+<section id="github-actions">
+<h3>GitHub Actions (скріншот)<a class="headerlink" href="#github-actions" title="Link to this heading"></a></h3>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/foto10.png"><img alt="_images/foto10.png" src="_images/foto10.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">GitHub Actions</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="github-pages">
+<h3>GitHub Pages сайт (скріншот)<a class="headerlink" href="#github-pages" title="Link to this heading"></a></h3>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/foto11.png"><img alt="_images/foto11.png" src="_images/foto11.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">GitHub Pages сайт</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pull-request">
+<h3>Pull Request (скріншот)<a class="headerlink" href="#pull-request" title="Link to this heading"></a></h3>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="_images/foto8.png"><img alt="_images/foto8.png" src="_images/foto8.png" style="width: 600px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Pull Request</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 </section>
 
 

@@ -1,0 +1,119 @@
+
+.document {
+    color: #222;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+.document h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #111;
+
+    background: #fff3b0; 
+    padding: 10px 14px;
+    border-radius: 8px;
+
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+.document h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #222;
+
+    background: #e6f0ff; /* світло-синє */
+    padding: 8px 12px;
+    border-radius: 6px;
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.document h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+
+    background: #f2f2f2;
+    padding: 6px 10px;
+    border-radius: 5px;
+
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+
+
+
+.document {
+    color: #222;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+
+.document h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #111;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+
+.document h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #222;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-left: 8px;
+    border-left: 4px solid #4a90e2;
+}
+
+
+.document h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+
+
+.document p {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+
+.document a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.document a:hover {
+    text-decoration: underline;
+}
+
+
+.document pre {
+    background: #f6f8fa;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+.document code {
+    background: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
