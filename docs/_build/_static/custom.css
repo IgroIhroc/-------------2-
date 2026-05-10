@@ -1,0 +1,15 @@
+.wy-menu-vertical a {
+    color: #b92929 !important;
+}
+
+.wy-menu-vertical a:visited {
+    color: #b92929 !important;
+}
+
+.wy-menu-vertical a:hover {
+    color: #b92929 !important;
+}
+
+.wy-side-nav-search a {
+    color: white !important;
+}

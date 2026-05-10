@@ -6,9 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Started &mdash; Student Documentation 1.0 documentation</title>
+  <title>Встановлення та запуск документації &mdash; Student Documentation 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -45,21 +46,70 @@
               <p class="caption" role="heading"><span class="caption-text">Зміст:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Вступ</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Get Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Вимоги</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Встановлення</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Запуск документації</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">Автоматичне оновлення (опціонально)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">Структура проєкту</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Встановлення та запуск документації</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Вимоги</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Клонування репозиторію</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Створення віртуального середовища</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux-macos">Linux / macOS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="section1.html">Розділ 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="section2.html">Розділ 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="section3.html">Розділ 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="section4.html">Розділ 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Встановлення залежностей</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Локальна збірка документації</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">Автоматичне оновлення документації</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">Публікація змін у GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">Додавання зображень</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">Підтримуються формати:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Посилання на використані джерела</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Посилання у тексті</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Оформлення джерела у списку літератури</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">Структура проєкту</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="section1.html">Розділ 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="section1.html#restructuredtext-vs-markdown">1.1. Огляд сучасних форматів розмітки (reStructuredText vs Markdown)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section1.html#sphinx-mkdocs-doxygen">1.2. Порівняльний аналіз генераторів статичних сайтів для документації (Sphinx, MkDocs, Doxygen)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section1.html#documentation-as-code">1.3. Концепція “Documentation as Code” (Документація як код)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="section2.html">Розділ 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="section2.html#sphinx-git">2.1. Архітектура взаємодії Sphinx, Git та хмарних сервісів</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section2.html#sphinx-python-autodoc-intersphinx">2.2. Можливості Sphinx для Python-проектів: autodoc, intersphinx та розширення</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section2.html#github-actions-triggers-workflows-runners">2.3. Механізми автоматизації GitHub Actions: події (triggers), робочі процеси (workflows) та оточення (runners)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="section3.html">Розділ 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="section3.html#conf-py">3.1. Структурування навчальної документації та налаштування conf.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section3.html#workflow-github-actions">3.2. Розробка сценарію (Workflow) для GitHub Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section3.html#linting-linkcheck-ci">3.3. Інтеграція перевірки синтаксису (linting) та перевірки посилань (linkcheck) у CI-процес</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="section4.html">Розділ 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="section4.html#id2">4.1. Аналіз швидкості публікації змін</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section4.html#pull-requests">4.2. Оцінка зручності спільної роботи студентів над документацією через Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section4.html#id3">4.3. Рекомендації щодо впровадження системи в освітній процес</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">Висновок</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sources.html">Список використаних джерел</a></li>
-<li class="toctree-l1"><a class="reference internal" href="appendices.html">Додатки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendices.html">Додатки</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html#a">ДОДАТОК A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html#id2">ДОДАТОК В</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html#d">ДОДАТОК D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#index-md">Index.md:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#selection1-md">selection1.md:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html#e">ДОДАТОК E</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#github-actions">GitHub Actions (скріншот)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#github-pages">GitHub Pages сайт (скріншот)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#pull-request">Pull Request (скріншот)</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -76,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Get Started</li>
+      <li class="breadcrumb-item active">Встановлення та запуск документації</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/get_started.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -86,69 +136,149 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="get-started">
-<h1>Get Started<a class="headerlink" href="#get-started" title="Link to this heading"></a></h1>
-<p>Цей розділ описує процес встановлення та запуску документааційного проєкту на базі Sphinx.</p>
-<section id="id1">
-<h2>Вимоги<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<p>Перед початком переконайтесь, що у вас встановлено:</p>
+  <section id="id1">
+<h1>Встановлення та запуск документації<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>Цей розділ описує процес встановлення, локального запуску та автоматичної публікації документаційного проєкту на базі Sphinx, MyST Parser та GitHub Actions.</p>
+<section id="id2">
+<h2>Вимоги<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Перед початком роботи переконайтесь, що у системі встановлено:</p>
 <ul class="simple">
 <li><p>Python 3.8 або новіше</p></li>
-<li><p>pip (менеджер пакетів Python)</p></li>
-<li><p>Git (опціонально)</p></li>
+<li><p>pip</p></li>
+<li><p>Git</p></li>
+<li><p>GitHub-акаунт (для автоматичного деплою через GitHub Pages)</p></li>
 </ul>
 </section>
-<section id="id2">
-<h2>Встановлення<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Клонуйте репозиторій:</p></li>
-</ol>
+<section id="id3">
+<h2>Клонування репозиторію<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Склонуйте репозиторій та перейдіть у папку проєкту:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;посилання_на_репозиторій&gt;
 <span class="nb">cd</span><span class="w"> </span>&lt;назва_папки&gt;
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Встановіть необхідні залежності:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</pre></div>
-</div>
-<p>Якщо файл <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> відсутній, встановіть Sphinx вручну:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx
+</section>
+<section id="id4">
+<h2>Створення віртуального середовища<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>Рекомендується використовувати <code class="docutils literal notranslate"><span class="pre">.venv</span></code> для ізоляції залежностей проєкту.</p>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
 </pre></div>
 </div>
 </section>
-<section id="id3">
-<h2>Запуск документації<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
-<p>Для локального перегляду документації виконайте:</p>
+<section id="linux-macos">
+<h3>Linux / macOS<a class="headerlink" href="#linux-macos" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id5">
+<h2>Встановлення залежностей<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<p>Після активації середовища встановіть усі необхідні пакети:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>Локальна збірка документації<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<p>Для генерації HTML-документації виконайте:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html
 </pre></div>
 </div>
-<p>Після виконання команди відкрийте файл:</p>
+<p>Після завершення збірки відкрийте файл:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>_build/html/index.html
 </pre></div>
 </div>
 </section>
-<section id="id4">
-<h2>Автоматичне оновлення (опціонально)<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
-<p>Для автоматичної перебудови документації при зміні файлів використовуйте:</p>
+<section id="id7">
+<h2>Автоматичне оновлення документації<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<p>Для локальної розробки використовується <code class="docutils literal notranslate"><span class="pre">sphinx-autobuild</span></code>, який автоматично перебудовує документацію після змін у файлах.</p>
+<p>Встановлення:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx-autobuild
-sphinx-autobuild<span class="w"> </span>.<span class="w"> </span>_build/html
 </pre></div>
 </div>
-<p>Після запуску відкрийте у браузері:</p>
+<p>Запуск:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-autobuild<span class="w"> </span>.<span class="w"> </span>_build/html
+</pre></div>
+</div>
+<p>Після запуску документація буде доступна у браузері:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>http://127.0.0.1:8000
 </pre></div>
 </div>
 </section>
-<section id="id5">
-<h2>Структура проєкту<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<section id="github">
+<h2>Публікація змін у GitHub<a class="headerlink" href="#github" title="Link to this heading"></a></h2>
+<p>Після редагування документації необхідно зберегти зміни у репозиторії:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;update docs&quot;</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>Після виконання команди <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> автоматично запускається GitHub Actions workflow, який:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">section1.md</span></code> – Розділ 1</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">section2.md</span></code> – Розділ 2</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">section3.md</span></code> – Розділ 3</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">section4.md</span></code> – Розділ 4</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sources.md</span></code> – Список використаних джерел</p></li>
+<li><p>виконує збірку документації</p></li>
+<li><p>перевіряє коректність HTML</p></li>
+<li><p>запускає CI/CD процес</p></li>
+<li><p>публікує оновлену версію сайту через GitHub Pages</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>Додавання зображень<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<p>Усі зображення рекомендується зберігати в папці <code class="docutils literal notranslate"><span class="pre">images/</span></code>.</p>
+<p>Приклад вставки зображення:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{figure} images/foto9.png
+:width: 600px
+:align: center
+
+Рис. 4.3 – Рекомендації щодо впровадження системи в освітній процес
+```
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h2>Підтримуються формати:<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>PNG</p></li>
+<li><p>JPG</p></li>
+<li><p>JPEG</p></li>
+<li><p>SVG</p></li>
+<li><p>WEBP</p></li>
+</ul>
+<p>Для коректної роботи GitHub Pages рекомендується використовувати латинські назви файлів без пробілів.</p>
+</section>
+<section id="id10">
+<h2>Посилання на використані джерела<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<p>Для переходу до джерел використовується система внутрішніх посилань.</p>
+<section id="id11">
+<h3>Посилання у тексті<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[<span class="nt">75</span>](<span class="na">sources.md#source75</span>)
+</pre></div>
+</div>
+</section>
+<section id="id12">
+<h3>Оформлення джерела у списку літератури<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>&lt;a id=&quot;source75&quot;&gt;&lt;/a&gt;
+
+<span class="k">75.</span> Співаковський А. Хмарні технології в управлінні освітнім процесом. Журнал освітніх інновацій. 2023. № 3. С. 110–125.
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id13">
+<h2>Структура проєкту<a class="headerlink" href="#id13" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">index.md</span></code> — головна сторінка</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getting-started.md</span></code> — інструкція запуску</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section1.md</span></code> — розділ 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section2.md</span></code> — розділ 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section3.md</span></code> — розділ 3</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section4.md</span></code> — розділ 4</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sources.md</span></code> — список використаних джерел</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">images/</span></code> — зображення документації</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.github/workflows/</span></code> — GitHub Actions workflows</p></li>
 </ul>
 </section>
 </section>
